@@ -1,6 +1,10 @@
 # Quotes
 The `quote` command group belongs to [`Project Echo`](https://github.com/TCLRainbow/DimBot/projects/1). Use it to interact with the quote database.
 
+Key terms:
+* `quoter`: Person who said the quote.
+* `uploader`: Discord user who uploaded the quote to DimBot
+
 ## Adding a quote
 alias: `d.quote a`
 ```
@@ -20,18 +24,33 @@ When `quoter` is received, DimBot will add the quote into the database and sends
 There are multiple ways to retrieve a quote:
 * By index
 * By quoter
+* By uploader
 ### Retrieving by index
 alias: `d.quote i`
 ```
-d.quote index <quote_index>
+d.quote index <index>
 ```
-* **quote_index**: Integer  
+* **index**: Integer  
   The index of the quote to retrieve.  
   If index is smaller than 1 ,exceeds the quote count in database or simply left empty, DimBot outputs the quote count and randomly picks a quote.
+### Retrieving by quoter
+alias: `d.quote q`
+```
+d.quote quoter <quoter>
+```
+* **quoter**: String  
+  The quoter to search
+### Retrieving by uploader
+alias: `d.quote u`
+```
+d.quote uploader <user>
+```
+* **user**: Discord User  
+  This can be anything that can represent a discord user, usually the user's ID. You can try user name.
 ## Deleting a quote
 alias: `d.quote d`, `d.quote del`
 ```
 d.quote delete <quote_index>
 ```
-* **quote_index**: Integer  
+* **index**: Integer  
   The index of the quote to delete.
