@@ -23,6 +23,6 @@ There are multiple ways to retrieve a quote:
 ```
 d.quote index <quote_index>
 ```
-* **quote_index**: Integer
+* **quote_index**: Integer  
   The index of the quote to retrieve.  
   If index is smaller than 1 ,exceeds the quote count in database or simply left empty, DimBot outputs the quote count and randomly picks a quote.
