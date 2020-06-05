@@ -46,7 +46,7 @@ alias: `d.quote u`
 d.quote uploader <user>
 ```
 * **user**: Discord User  
-  This can be anything that can represent a discord user, usually the user's ID. You can try user name.
+  This can be anything that can represent a discord user, usually the user's ID or username.
 ## Deleting a quote
 alias: `d.quote d`, `d.quote del`
 ```
