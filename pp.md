@@ -1,61 +1,50 @@
-# Commands within d.pp
-> **Note**: Everyone's pp size will be reset whenever the bot restarts.  
-### Changes someone's/your pp size
-```
-d.pp [user]
+# PP: Sword fighting minigame
+> Please note that at the current stage, all pp-related data will reset once the bot restarts!
 
-User: d.pp 
-DimBot: User's penis
-        8====D
+> This is a global context command: You can either send the commands in a server or DM
+
+## Fundamental command: d.pp
+The very first thing that you should do when starting is to send `d.pp`. This initialises your pp. You can also send this again to reroll your pp, or `d.pp <user>` to set the target's pp.
+
+Each `d.pp` command call will perform the following actions on the target's pp:
+* Sets the size to a random integer between 0-69 inclusive
+* 25% chance to generate viagra
+* 10% chance to generate sesami oil **if the target doesn't have it**
+
+This means that `d.pp` always rerolls viagra even if it is already available/activated; if the target has sesami oil, `d.pp` does NOT affect it in any way.
+
+## Combat command: d.pp sf
+The next command is `d.pp swordfight` *(`sf`)*, allowing you to use your pp as a weapon and sword fight. If you just send `d.pp sf`, you will fight against a random person, **including yourself**. You can specify your target by `d.pp sf <user>`.
 
 
-User: d.pp @Someone
-DimBot: Someone's penis
-        8D
+Provided that both sides have a valid pp, the following will happen, the bot will award you a score:
 ```
-* **User**: *Optional*, the target to change the pp size.
-> **Note**: The size of User's pp is randomly generated within 0-27 inclusive
-### Max your pp size
+score = target's size - your size
 ```
-Dim: d.pp max
-DimBot: Dim's penis
-        8===========================D
-        MAX POWER
-```
-> Note: This command is only usable by bot owner
-### Fight others with your pp
-alias: `d.pp sf` 
-```
-d.pp swordfight <user>
+This will be added into your total score as well.
 
-User: d.pp swordfight @Someone
-DimBot:   VICTORY
-          User's pp:
-          8=D
-          Someone's pp:
-          8D
-```
-* **User**: The user you are going to fight
-### Slap your pp aginst others
-```
-d.pp slap <user>
+In cases where your target's size is actually larger, the awarded score will be negative, and your score will simply be deducted.
 
-User: d.pp slap @Someone
-DimBot: 8===========D (Target's icon)
-```
-* **User**: The user you are going to slap
-### Show the size of your pp
-```
-d.pp size
+> Note: This command has a cooldown of 10 seconds per user.
+## Other commands
+### d.pp info
+Displays your pp statistics without modifying it. This command also displays the size of your pp in integer unlike other commands which simply draw it.
+### d.pp leaderboard
+Shows the score of every person. You will occasionally see a lot of persons with 0. This is usually due to people initialising others' pp but they haven't `d.pp sf` for once.
 
-User: d.pp size
-DimBot: pp size: 0
-```
-### Shrink your pp size to 0
-```
-d.pp min
+------------------
+## Items
+### Viagra
+When your pp has `Viagra available!` under it, it means you can activate viagra by `d.pp viagra`. Doing so will double your current pp size for 3 rounds during sword fight.
 
-User: d.pp min
-DimBot: User's penis
-        8D
-```
+Please note that your opponent can still change your pp size even if you have viagra available/activated.
+### Sesami oil
+Sesami oil is a **passive** item. When obtained, you can completely absorb the next attack targetting you. However, you can't decide when to activate this item.
+## Abilities
+If your items fit certain scenarios, you can use abilities to do powerful moves.
+### Zenitsu
+Zenitsu is the name of a character in Demon Slayer, basically like Thor but holding a katana instead.
+
+When you have **both** ``Viagra available`` **and** ``Sesami oil``, you can send `d.pp zen <user>` to stun a user for 2 rounds. Simply sending `d.pp zen` stuns a random person, **including yourself**.
+
+If you are stunned, you must send `d.pp sf` twice to remove the effect.
