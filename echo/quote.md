@@ -1,6 +1,4 @@
 # Quotes
-The `quote` command group belongs to [`Project Echo`](https://github.com/TCLRainbow/DimBot/projects/1). Use it to interact with the quote database.
-
 Key terms:
 * `quoter`: Person who said the quote.
 * `uploader`: Discord user who uploaded the quote to DimBot

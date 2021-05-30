@@ -1,7 +1,7 @@
 # DimBot
 
 Modules wiki:
-* [Project Echo: Interacting with the quote database](https://github.com/TCLRainbow/DimBot/wiki/Project-Echo)
+* [[Project Echo: Interacting with the quote database|echo]]
 
 * [PP: Interacting with the pp command](https://github.com/TCLRainbow/DimBot/wiki/pp)
 
