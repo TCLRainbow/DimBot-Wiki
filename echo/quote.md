@@ -1,8 +1,23 @@
-# Quotes
-Key terms:
-* `quoter`: Person who said the quote.
-* `uploader`: Discord user who uploaded the quote to DimBot
+# Key terms
+## Uploader
+A Discord user who uploaded the quote
 
+## Quoter
+Quoter means the person who said the quote. However, quoters can be grouped.
+
+Quoter's format: `[Quoter], [QuoterGroup]`
+
+Consider the following examples:
+> Stay hungry, stay foolish. - Steve Jobs  
+> I love Dim - Kingsman, Dim's server  
+> Someone loves Dim - , Dim's server
+
+`Steve Jobs` and `Kingsman` are quoters. `Dim's server` is the quoter group.
+> Note: You can specify just the quoter group by `, <QuoterGroup>`
+
+This allows an uploader to give context for a quote. A common use case of quoter group is the name of an anime, with quoter being a character within the anime.
+
+# Commands
 ## Adding a quote
 alias: `d.quote a`
 ```

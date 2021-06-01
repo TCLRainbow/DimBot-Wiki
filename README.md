@@ -1,7 +1,7 @@
 # DimBot
 
 Modules wiki:
-* [Echo: Storing messages](wiki/echo/echo.md)
+* [Echo: Storing messages](echo/echo.md)
 
 * [PP: Interacting with the pp command](https://github.com/TCLRainbow/DimBot/wiki/pp)
 
